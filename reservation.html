@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резерв столиків - Ресторан</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Резерв столиків</h1>
+  <p>Забронюйте столик за кілька хвилин</p>
+</header>
+
+<nav>
+  <a href="index.html">Головна</a>
+  <a href="about.html">Про нас</a>
+  <a href="menu.html">Меню</a>
+  <a href="reservation.html">Резерв столиків</a>
+  <a href="#">Акції та події</a>
+  <a href="#">Додаткові послуги</a>
+  <a href="#">Особистий кабінет</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Форма бронювання</h2>
+    <form action="#" method="post">
+      <label for="date">Дата:</label><br>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <label for="time">Час:</label><br>
+      <input type="time" id="time" name="time" required><br><br>
+
+      <label for="guests">Кількість гостей:</label><br>
+      <input type="number" id="guests" name="guests" min="1" max="20" required><br><br>
+
+      <label for="wishes">Спеціальні побажання:</label><br>
+      <textarea id="wishes" name="wishes" rows="3" placeholder="Наприклад: стіл біля вікна..."></textarea><br><br>
+
+      <h3>Контактна інформація</h3>
+
+      <label for="name">Ім’я:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="phone">Телефон:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="email">Електронна пошта:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <button type="submit">Забронювати</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Контакти | Політика користувача | Фотогалерея | Відгуки</p>
+</footer>
+
+</body>
+</html>
