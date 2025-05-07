@@ -288,6 +288,11 @@ main section {
   background-size: cover;
   color: white;
 }
+
+
+/* Акції та події */
+
+
 .events-section {
   padding: 60px 20px;
   background: linear-gradient(to right, #fdfcfb, #e2d1c3);
@@ -359,6 +364,55 @@ main section {
   font-size: 0.9rem;
   color: #777;
   font-style: italic;
+}
+.extra-services {
+  padding: 50px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.extra-services h2 {
+  font-size: 2.2rem;
+  color: #5a2c14;
+  margin-bottom: 40px;
+}
+
+
+/* Даткові послуги */
+
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #b71c1c;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
 
 
