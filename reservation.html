@@ -6,11 +6,11 @@
   <title>Резерв столика — Ресторан "Смак"</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="reservation-bg">
 
 <header class="page-header">
-  <h1>Резерв столика</h1>
-  <p>Забронюйте свій ідеальний вечір у нашому ресторані</p>
+  <h1>Забронюйте столик</h1>
+  <p>Ми з нетерпінням чекаємо на вашу присутність</p>
 </header>
 
 <nav>
@@ -23,29 +23,30 @@
   <a href="account.html">Особистий кабінет</a>
 </nav>
 
-<main class="reservation-container">
+<main class="reservation-container centered">
   <section class="reservation-form">
-    <h2>Форма бронювання</h2>
     <form action="#" method="post">
-      <label for="name">Ім’я:</label>
+      <h2>Форма бронювання</h2>
+
+      <label for="name">Ім’я</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="phone">Телефон:</label>
+      <label for="phone">Телефон</label>
       <input type="tel" id="phone" name="phone" placeholder="+380..." required>
 
-      <label for="date">Дата:</label>
+      <label for="date">Дата</label>
       <input type="date" id="date" name="date" required>
 
-      <label for="time">Час:</label>
+      <label for="time">Час</label>
       <input type="time" id="time" name="time" required>
 
-      <label for="guests">Кількість гостей:</label>
+      <label for="guests">Кількість гостей</label>
       <input type="number" id="guests" name="guests" min="1" max="20" required>
 
-      <label for="notes">Коментарі (необов’язково):</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Особливі побажання..."></textarea>
+      <label for="notes">Коментарі</label>
+      <textarea id="notes" name="notes" rows="3" placeholder="Особливі побажання..."></textarea>
 
-      <button type="submit" class="btn">Забронювати</button>
+      <button type="submit">Забронювати</button>
     </form>
   </section>
 </main>
@@ -56,3 +57,4 @@
 
 </body>
 </html>
+
