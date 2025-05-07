@@ -1,67 +1,103 @@
+/* Базові стилі */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #6b3e26;
-  color: white;
-  padding: 20px;
-  text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
+/* Хедер */
+header,
+.main-header {
+  text-align: center;
+  color: white;
+}
+
+header {
+  background-color: #6b3e26;
+  padding: 20px;
+}
+
+.main-header {
+  background: url('images/restaurant-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-overlay,
+.header-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.main-header h1,
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.main-header p,
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Навігація */
 nav {
-  background-color: #f4f4f4;
-  padding: 10px;
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background-color: #222;
 }
 
 nav a {
-  text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 10px 14px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 nav a:hover {
-  color: #6b3e26;
+  background-color: #d32f2f;
 }
 
+/* Основний контент */
 main {
   padding: 20px;
   text-align: center;
 }
-.menu-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 400px;
-  background-color: #f9f9f9;
-}
-.menu-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-.menu-item h3 {
-  margin-top: 0.5rem;
-}
-.menu-item p {
-  margin: 0.5rem 0;
-  color: #555;
-}
-.price {
-  display: block;
-  font-weight: bold;
-  color: #b12704;
-  margin-top: 0.5rem;
-}
-/* Загальні стилі для секцій меню */
+
+/* Меню */
 main section {
   display: flex;
   flex-wrap: wrap;
@@ -69,12 +105,11 @@ main section {
   margin-bottom: 40px;
 }
 
-/* Картка страви */
 .menu-item {
   width: 300px;
+  background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
-  background-color: #fff;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
@@ -84,7 +119,6 @@ main section {
   transform: scale(1.02);
 }
 
-/* Зображення страви */
 .menu-item img {
   width: 100%;
   height: auto;
@@ -92,25 +126,25 @@ main section {
   object-fit: cover;
 }
 
-/* Назва страви */
 .menu-item h3 {
   font-size: 1.2rem;
   margin: 10px 0 5px;
 }
 
-/* Опис страви */
 .menu-item p {
   color: #555;
   font-size: 0.95rem;
   margin-bottom: 10px;
 }
 
-/* Ціна */
 .menu-item .price {
+  display: block;
   font-weight: bold;
   font-size: 1rem;
   color: #d32f2f;
 }
+
+/* About Section */
 .about-section {
   display: flex;
   flex-direction: column;
@@ -140,173 +174,12 @@ main section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   object-fit: cover;
 }
-/* Головний хедер з фоном */
-.main-header {
-  background: url'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/3b/46/af/the-first-lviv-grill.jpg?w=600&h=-1&s=1' no-repeat center center/cover;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
 
-.header-content {
-  background-color: rgba(0,0,0,0.5);
-  display: inline-block;
-  padding: 30px;
-  border-radius: 12px;
-}
-
-.header-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.header-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #d32f2f;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #a91b1b;
-}
-
-/* Особливості */
+/* Features */
 .features {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.feature-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.feature-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Філософія */
-.highlight {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.highlight p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* Заклик до дії */
-.cta {
-  background-color: #d32f2f;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.cta h2 {
-  margin-bottom: 20px;
-}
-/* Загальні стилі */
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #fff;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Хедер з фоном */
-.main-header {
-  background: url('images/restaurant-bg.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
-  text-align: center;
-}
-
-.header-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 12px;
-}
-
-.main-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.main-header p {
-  font-size: 1.3rem;
-  margin-bottom: 25px;
-}
-
-.btn {
-  background-color: #d32f2f;
-  padding: 12px 25px;
-  color: white;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #b71c1c;
-}
-
-/* Меню навігації */
-nav {
-  background-color: #222;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Особливості */
-.features {
-  text-align: center;
   padding: 50px 20px;
   background-color: #f9f9f9;
+  text-align: center;
 }
 
 .feature-grid {
@@ -320,13 +193,13 @@ nav a:hover {
 .feature-card {
   background-color: white;
   border: 1px solid #ddd;
-  padding: 20px;
   border-radius: 12px;
+  padding: 20px;
   width: 280px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Філософія */
+/* Highlight Section */
 .highlight {
   padding: 50px 20px;
   background-color: white;
@@ -340,13 +213,23 @@ nav a:hover {
   color: #555;
 }
 
-/* Заклик до дії */
-.ct
-/* Резерв сторінка */
+/* CTA */
+.cta {
+  background-color: #d32f2f;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+/* Резервація */
 .page-header {
-  background-color: #f5f5f5;
   text-align: center;
   padding: 50px 20px;
+  background-color: #f5f5f5;
 }
 
 .page-header h1 {
@@ -367,113 +250,13 @@ nav a:hover {
 }
 
 .reservation-form {
-  background-color: #fafafa;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ddd;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 15px;
   max-width: 500px;
   width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.reservation-form h2 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.reservation-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.reservation-form input,
-.reservation-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.reservation-form button {
-  display: block;
-  margin: 25px auto 0;
-  background-color: #d32f2f;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.reservation-form button:hover {
-  background-color: #b71c1c;
-}
-/* Фон із напівпрозорим зображенням */
-.reservation-bg {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/reservation-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Центроване оформлення */
-.page-header {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.page-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 1.3rem;
-  color: #eee;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background-color: #d32f2f;
-}
-
-/* Форма */
-.reservation-container {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.reservation-form {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 500px;
   color: #222;
   text-align: center;
 }
@@ -499,6 +282,7 @@ nav a:hover {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .reservation-form button {
@@ -517,16 +301,19 @@ nav a:hover {
   background-color: #8a1414;
 }
 
+/* Фон секції резервації */
+.reservation-bg {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/reservation-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  color: #ccc;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-footer {
   background-color: #eee;
-  padding: 10px;
-  text-align: center;
+  color: #555;
   margin-top: 40px;
 }
+
