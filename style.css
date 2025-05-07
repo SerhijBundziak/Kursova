@@ -140,6 +140,94 @@ main section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   object-fit: cover;
 }
+/* Головний хедер з фоном */
+.main-header {
+  background: url('images/restaurant-bg.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.header-content {
+  background-color: rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a91b1b;
+}
+
+/* Особливості */
+.features {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Філософія */
+.highlight {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.highlight p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Заклик до дії */
+.cta {
+  background-color: #d32f2f;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
 
 footer {
   background-color: #eee;
