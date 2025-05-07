@@ -223,11 +223,6 @@ main section {
   margin-bottom: 20px;
 }
 
-.page-header p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
 .reservation-container {
   display: flex;
   justify-content: center;
