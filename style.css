@@ -377,55 +377,33 @@ main section {
   margin-bottom: 40px;
 }
 
+.extra-services {
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* Даткові послуги */
 
 
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.services-title {
+  font-size: 2rem;
+  color: #4b2e13;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.service-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 25px 20px;
-  width: 280px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.service-card h3 {
-  font-size: 1.4rem;
-  color: #b71c1c;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-}
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
 }
 
 .service-card {
   background-color: #fff;
-  padding: 20px;
+  padding: 16px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
 }
 
@@ -434,24 +412,25 @@ main section {
 }
 
 .service-card h3 {
-  margin-top: 15px;
-  font-size: 1.4em;
+  margin: 16px 0 10px;
+  font-size: 1.3em;
+  color: #8B0000;
 }
 
 .service-card p {
   font-size: 1em;
-  color: #555;
+  color: #444;
+  line-height: 1.5;
 }
 
 .service-images {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .service-images img {
-  width: calc(50% - 5px);
-  height: 120px;
+  width: 50%;
+  height: 160px;
   object-fit: cover;
   border-radius: 10px;
 }
