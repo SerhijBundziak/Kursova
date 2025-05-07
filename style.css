@@ -35,6 +35,32 @@ main {
   padding: 20px;
   text-align: center;
 }
+.menu-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  background-color: #f9f9f9;
+}
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.menu-item h3 {
+  margin-top: 0.5rem;
+}
+.menu-item p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+.price {
+  display: block;
+  font-weight: bold;
+  color: #b12704;
+  margin-top: 0.5rem;
+}
 
 footer {
   background-color: #eee;
