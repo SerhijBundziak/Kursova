@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Головна - Ресторан</title>
+  <title>Ресторан "Смак"</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Ласкаво просимо до нашого ресторану</h1>
-  <p>Смак, який ви запам'ятаєте назавжди</p>
+<header class="main-header">
+  <div class="header-content">
+    <h1>Ласкаво просимо до ресторану "Смак"</h1>
+    <p>Місце, де народжується справжній смак</p>
+    <a href="menu.html" class="btn">Переглянути меню</a>
+  </div>
 </header>
 
 <nav>
+  <a href="index.html">Головна</a>
   <a href="about.html">Про нас</a>
   <a href="menu.html">Меню</a>
   <a href="reservation.html">Резерв столиків</a>
@@ -23,8 +27,36 @@
 </nav>
 
 <main>
-  <h2>Найкращі страви для вас</h2>
-  <p>Запрошуємо скуштувати наші унікальні страви, створені з любов'ю.</p>
+  <section class="features">
+    <h2>Чому обирають нас?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Авторська кухня</h3>
+        <p>Вишукані страви від шефа, які здивують кожного гурмана.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Затишна атмосфера</h3>
+        <p>Ідеально підходить як для романтичної вечері, так і для святкувань.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Події та акції</h3>
+        <p>Ми регулярно організовуємо музичні вечори, дегустації, святкові акції.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <h2>Наша філософія</h2>
+    <p>
+      Ми віримо, що справжня їжа — це мистецтво, яке повинно приносити радість. 
+      У нашому ресторані кожен гість — як друг, якого ми раді бачити знову і знову.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Забронюйте столик уже сьогодні!</h2>
+    <a href="reservation.html" class="btn">Резервувати</a>
+  </section>
 </main>
 
 <footer>
