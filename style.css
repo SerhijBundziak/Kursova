@@ -142,7 +142,7 @@ main section {
 }
 /* Головний хедер з фоном */
 .main-header {
-  background: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/3b/46/af/the-first-lviv-grill.jpg?w=600&h=-1&s=1') no-repeat center center/cover;
+  background: url'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/3b/46/af/the-first-lviv-grill.jpg?w=600&h=-1&s=1' no-repeat center center/cover;
   color: white;
   padding: 100px 20px;
   text-align: center;
