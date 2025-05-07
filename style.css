@@ -17,21 +17,19 @@ header,
 .main-header {
   text-align: center;
   color: white;
-}
-
-header {
-  background-color: #6b3e26;
+  background-color: #6b3e26; /* Однаковий фон */
   padding: 20px;
 }
 
 .main-header {
-  background: url('images/restaurant-bg.jpg') no-repeat center center/cover;
-  height: 100vh;
+  /* Видалено фонове зображення */
+  height: auto; /* Можна встановити потрібну висоту або прибрати */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 
 .header-overlay,
 .header-content {
