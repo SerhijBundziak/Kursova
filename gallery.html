@@ -4,61 +4,7 @@
   <meta charset="UTF-8" />
   <title>Фотогалерея</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .carousel-container {
-      width: 90%;
-      max-width: 800px;
-      margin: 50px auto;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    .carousel-slide {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 16px;
-      flex-shrink: 0;
-    }
-
-    .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 10px;
-    }
-
-    .carousel-buttons button {
-      background-color: rgba(0,0,0,0.6);
-      color: #fff;
-      border: none;
-      font-size: 1.5rem;
-      padding: 8px 12px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .carousel-buttons button:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    @media (max-width: 600px) {
-      .carousel-slide img {
-        height: 250px;
-      }
-    }
-  </style>
+  
 </head>
 <body>
   <header class="main-header">
@@ -67,13 +13,21 @@
       <p>Найкращі моменти з нашого ресторану</p>
     </div>
   </header>
-
+<nav>
+  <a href="index.html">Головна</a>
+  <a href="about.html">Про нас</a>
+  <a href="menu.html">Меню</a>
+  <a href="reservation.html">Резерв столиків</a>
+  <a href="events.html">Акції та події</a>
+  <a href="services.html">Додаткові послуги</a>
+  <a href="account.html">Особистий кабінет</a>
+</nav>
   <main>
     <div class="carousel-container">
       <div class="carousel-slide" id="carouselSlide">
-        <img src="images/gallery1.jpg" alt="Інтер'єр 1">
-        <img src="images/gallery2.jpg" alt="Інтер'єр 2">
-        <img src="images/gallery3.jpg" alt="Інтер'єр 3">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/3b/46/af/the-first-lviv-grill.jpg?w=600&h=-1&s=1" alt="Інтер'єр 1">
+        <img src="https://lviv.travel/image/blocks/f3/59/f359fd174986d28e61f94a86aae6e023b26858a6_1692166878.jpeg?w=600&crop=5168%2C3448%2C0%2C0" alt="Інтер'єр 2">
+        <img src="https://info-ua.net/wp-content/uploads/2024/09/valentino.jpg" alt="Інтер'єр 3">
       </div>
       <div class="carousel-buttons">
         <button id="prev">&#10094;</button>
@@ -81,8 +35,6 @@
       </div>
     </div>
   </main>
-
-  <footer>© 2025 Ресторан "Смакота". Усі права захищено.</footer>
 
   <script>
     const slide = document.getElementById('carouselSlide');
@@ -109,5 +61,12 @@
     window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
   </script>
+    <footer>
+  <a href="contacts.html">Контакти</a> |
+    <a href="policy.html">Політика користувача</a> |
+    <a href="gallery.html">Фотогалерея</a>
+  </div>
+  <p class="copyright">© 2025 Ресторан. Усі права захищені.</p>
+
 </body>
 </html>
