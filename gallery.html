@@ -1,11 +1,104 @@
-<main class="footer-page">
-  <h2>Фотогалерея</h2>
-  <div class="carousel">
-    <div class="carousel-track">
-      <img src="images/gallery1.jpg" alt="Галерея 1">
-      <img src="images/gallery2.jpg" alt="Галерея 2">
-      <img src="images/gallery3.jpg" alt="Галерея 3">
-      <img src="images/gallery4.jpg" alt="Галерея 4">
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Фотогалерея</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .carousel-container {
+      max-width: 800px;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 16px;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Фотогалерея</h1>
+      <p>Найкращі моменти з нашого ресторану</p>
     </div>
-  </div>
-</main>
+  </header>
+
+  <main>
+    <div class="carousel-container">
+      <div class="carousel-slide" id="carouselSlide">
+        <img src="images/gallery1.jpg" alt="Галерея 1">
+        <img src="images/gallery2.jpg" alt="Галерея 2">
+        <img src="images/gallery3.jpg" alt="Галерея 3">
+        <img src="images/gallery4.jpg" alt="Галерея 4">
+      </div>
+      <div class="carousel-buttons">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 Ресторан "Смакота". Усі права захищено.</footer>
+
+  <script>
+    const slide = document.getElementById('carouselSlide');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    let index = 0;
+
+    function updateCarousel() {
+      const width = slide.clientWidth / slide.children.length;
+      slide.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slide.children.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slide.children.length) % slide.children.length;
+      updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  </script>
+</body>
+</html>
