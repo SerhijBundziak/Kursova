@@ -4,6 +4,61 @@
   <meta charset="UTF-8" />
   <title>Фотогалерея</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .carousel-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      font-size: 1.5rem;
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 600px) {
+      .carousel-slide img {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -12,22 +67,13 @@
       <p>Найкращі моменти з нашого ресторану</p>
     </div>
   </header>
-<nav>
-  <a href="index.html">Головна</a>
-  <a href="about.html">Про нас</a>
-  <a href="menu.html">Меню</a>
-  <a href="reservation.html">Резерв столиків</a>
-  <a href="events.html">Акції та події</a>
-  <a href="services.html">Додаткові послуги</a>
-  <a href="account.html">Особистий кабінет</a>
-</nav>
+
   <main>
     <div class="carousel-container">
       <div class="carousel-slide" id="carouselSlide">
-        <img src="https://hotel-lviv.com.ua/wp-content/uploads/2022/09/IMG_6783.jpg" alt="Галерея 1">
-        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAwm0o45Igi5xam6wRD8fw5luGduDlaLx5adTzVKcbVpwoIg6G5OV6vXAT-_MKJ-I9Hw&usqp=CAU" alt="Галерея 2">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/91/bf/b6/caption.jpg?w=600&h=400&s=1" alt="Галерея 3">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7LG8urKYzl0kJT4a1XjKf63rS2fOE6jT6Yg&s" alt="Галерея 4">
+        <img src="images/gallery1.jpg" alt="Інтер'єр 1">
+        <img src="images/gallery2.jpg" alt="Інтер'єр 2">
+        <img src="images/gallery3.jpg" alt="Інтер'єр 3">
       </div>
       <div class="carousel-buttons">
         <button id="prev">&#10094;</button>
@@ -40,34 +86,28 @@
 
   <script>
     const slide = document.getElementById('carouselSlide');
+    const images = slide.querySelectorAll('img');
     const nextBtn = document.getElementById('next');
     const prevBtn = document.getElementById('prev');
     let index = 0;
 
     function updateCarousel() {
-      const width = slide.clientWidth / slide.children.length;
-      slide.style.transform = `translateX(-${index * width}px)`;
+      const imageWidth = images[0].clientWidth;
+      slide.style.transform = `translateX(-${index * imageWidth}px)`;
     }
 
     nextBtn.addEventListener('click', () => {
-      index = (index + 1) % slide.children.length;
+      index = (index + 1) % images.length;
       updateCarousel();
     });
 
     prevBtn.addEventListener('click', () => {
-      index = (index - 1 + slide.children.length) % slide.children.length;
+      index = (index - 1 + images.length) % images.length;
       updateCarousel();
     });
 
     window.addEventListener('resize', updateCarousel);
-    updateCarousel();
+    window.addEventListener('load', updateCarousel);
   </script>
-  <footer>
-  <a href="contacts.html">Контакти</a> |
-    <a href="policy.html">Політика користувача</a> |
-    <a href="gallery.html">Фотогалерея</a>
-  </div>
-  <p class="copyright">© 2025 Ресторан. Усі права захищені.</p>
-</footer>
 </body>
 </html>
