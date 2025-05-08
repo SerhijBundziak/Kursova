@@ -8,9 +8,11 @@
 </head>
 <body>
 
-<header>
-  <h1>Особистий кабінет</h1>
-  <p>Керуйте своїми замовленнями та інформацією</p>
+<header class="main-header">
+  <div class="header-content">
+    <h1>Особистий кабінет</h1>
+    <p>Керуйте своїми замовленнями та інформацією</p>
+  </div>
 </header>
 
 <nav>
@@ -24,32 +26,19 @@
 </nav>
 
 <main>
-  <section>
+  <div class="reservation-form" style="max-width: 400px;">
     <h2>Вхід до акаунту</h2>
     <form action="#" method="post">
-      <label for="email">Електронна пошта:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Електронна пошта:</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="password">Пароль:</label><br>
-      <input type="password" id="password" name="password" required><br><br>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
 
       <button type="submit">Увійти</button>
     </form>
-
-    <p>Ще не маєте акаунту? <a href="#">Зареєструватися</a></p>
-  </section>
-
-  <section>
-    <h2>Ваші дані (після входу)</h2>
-    <ul>
-      <li><strong>Ім’я:</strong> Іван Іванов</li>
-      <li><strong>Телефон:</strong> +380 99 123 4567</li>
-      <li><strong>Останнє бронювання:</strong> 2 травня, 19:00, 4 особи</li>
-      <li><strong>Замовлення доставки:</strong> 1 квітня — 3 страви</li>
-    </ul>
-    <button>Редагувати профіль</button>
-    <button>Вийти</button>
-  </section>
+    <p style="margin-top: 20px;">Ще не маєте акаунту? <a href="#">Зареєструватися</a></p>
+  </div>
 </main>
 
 <footer>
@@ -58,3 +47,4 @@
 
 </body>
 </html>
+
