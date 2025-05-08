@@ -226,7 +226,7 @@ main section {
 .reservation-container {
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 30px 30px;
   background-color: #fff;
 }
 
