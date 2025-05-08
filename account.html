@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Особистий кабінет - Ресторан</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,18 +34,23 @@
 </nav>
 
 <main>
-  <div class="reservation-form" style="max-width: 400px;">
-    <h2>Вхід до акаунту</h2>
-    <form action="#" method="post">
-      <label for="email">Електронна пошта:</label>
-      <input type="email" id="email" name="email" required>
+  <div class="center-wrapper">
+    <div class="reservation-form" style="max-width: 400px;">
+      <h2>Вхід до акаунту</h2>
+      <form action="#" method="post">
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="password">Пароль:</label>
-      <input type="password" id="password" name="password" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
 
-      <button type="submit">Увійти</button>
-    </form>
-    <p style="margin-top: 20px;">Ще не маєте акаунту? <a href="#">Зареєструватися</a></p>
+        <button type="submit">Увійти</button>
+      </form>
+      <div style="margin-top: 25px;">
+        <p>Ще не маєте акаунту?</p>
+        <a href="#" class="btn">Зареєструватися</a>
+      </div>
+    </div>
   </div>
 </main>
 
